@@ -37,7 +37,7 @@ namespace Game.Chat.Commands
             if (!handler.ExtractPlayerTarget(args, out target, out targetGuid, out targetName))
                 return false;
 
-            string tail1 = args.NextString("");
+            string tail1 = args.NextString(); 
             if (string.IsNullOrEmpty(tail1))
                 return false;
 
@@ -45,7 +45,7 @@ namespace Game.Chat.Commands
             if (string.IsNullOrEmpty(subject))
                 return false;
 
-            string tail2 = args.NextString("");
+            string tail2 = args.NextString();
             if (string.IsNullOrEmpty(tail2))
                 return false;
 
@@ -78,7 +78,7 @@ namespace Game.Chat.Commands
             if (!handler.ExtractPlayerTarget(args, out receiver, out receiverGuid, out receiverName))
                 return false;
 
-            string tail1 = args.NextString("");
+            string tail1 = args.NextString();
             if (string.IsNullOrEmpty(tail1))
                 return false;
 
@@ -86,7 +86,7 @@ namespace Game.Chat.Commands
             if (string.IsNullOrEmpty(subject))
                 return false;
 
-            string tail2 = args.NextString("");
+            string tail2 = args.NextString();
             if (string.IsNullOrEmpty(tail2))
                 return false;
 
@@ -98,7 +98,7 @@ namespace Game.Chat.Commands
             List<KeyValuePair<uint, uint>> items = new();
 
             // get all tail string
-            StringArguments tail = new(args.NextString(""));
+            StringArguments tail = new(args.NextString());
 
             // get from tail next item str
             StringArguments itemStr;
@@ -179,7 +179,7 @@ namespace Game.Chat.Commands
             if (!handler.ExtractPlayerTarget(args, out receiver, out receiverGuid, out receiverName))
                 return false;
 
-            string tail1 = args.NextString("");
+            string tail1 = args.NextString();
             if (string.IsNullOrEmpty(tail1))
                 return false;
 
@@ -187,7 +187,7 @@ namespace Game.Chat.Commands
             if (string.IsNullOrEmpty(subject))
                 return false;
 
-            string tail2 = args.NextString("");
+            string tail2 = args.NextString();
             if (string.IsNullOrEmpty(tail2))
                 return false;
 
@@ -195,7 +195,7 @@ namespace Game.Chat.Commands
             if (string.IsNullOrEmpty(text))
                 return false;
 
-            if (!long.TryParse(args.NextString(""), out long money))
+            if (!long.TryParse(args.NextString(), out long money))
                 money = 0;
 
             if (money <= 0)
@@ -225,7 +225,7 @@ namespace Game.Chat.Commands
             if (!handler.ExtractPlayerTarget(args, out player))
                 return false;
 
-            string msgStr = args.NextString("");
+            string msgStr = args.NextString();
             if (string.IsNullOrEmpty(msgStr))
                 return false;
 
